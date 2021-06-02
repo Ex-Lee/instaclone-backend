@@ -3,7 +3,7 @@ import client from "../client";
 export default {
   User: {
     totalFollowers: ({ id }) => {
-      client.user.findUnique({
+      return client.user.findUnique({
         where: {
           following: {
             some: {
@@ -14,7 +14,7 @@ export default {
       });
     },
     totalFollowing: ({ id }) => {
-      client.user.findUnique({
+      return client.user.findUnique({
         where: {
           followers: {
             some: {
