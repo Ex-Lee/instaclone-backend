@@ -118,4 +118,5 @@ dist
 
 
 .DS_Store
-/uploads
+src/uploads
+/build
